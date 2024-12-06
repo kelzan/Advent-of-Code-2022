@@ -32,7 +32,7 @@ FLOW_PATTERN = re.compile(r"flow rate=(\d+)")
 my_dir: pl.Path = pl.Path(__file__).parent
 parsed_data: list[Valve] = list()
 
-with open(my_dir / "input.txt") as input_file:
+with open(my_dir / "day16a_input.txt") as input_file:
     for line in input_file:
         flow_rate = FLOW_PATTERN.search(line)[1]
         valve_names = VALVE_PATTERN.findall(line)
